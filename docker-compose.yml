@@ -8,7 +8,7 @@ networks:
 
 services:
     portfolio:
-        image: haidousm/portfolio:1.0.0
+        image: haidousm/portfolio:1.0.1
         labels:
             - traefik.http.routers.portfolio.rule=Host(`moussa.codes`)
             - traefik.http.routers.portfolio.tls=true
