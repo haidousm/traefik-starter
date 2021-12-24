@@ -22,3 +22,7 @@
 
 [providers.file]
   filename = "traefik_dynamic.toml"
+
+[log]
+  level = "DEBUG"
+  filePath = "~/haidousm.com/logs/traefik.log"

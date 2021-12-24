@@ -10,7 +10,7 @@ services:
     portfolio:
         image: haidousm/portfolio:1.0.1
         labels:
-            - traefik.http.routers.portfolio.rule=Host(`moussa.codes`)
+            - traefik.http.routers.portfolio.rule=Host(`moussa.codes`) || Host(`www.moussa.codes`)
             - traefik.http.routers.portfolio.tls=true
             - traefik.http.routers.portfolio.tls.certresolver=lets-encrypt
             - traefik.port=80
