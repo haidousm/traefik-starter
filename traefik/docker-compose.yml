@@ -20,3 +20,13 @@ services:
                 - $PWD/acme.json:/acme.json
             networks:
                 - web
+    traefikker:
+            image: haidousm/traefikker:1.0.0
+            ports:
+                - 6969:8080
+            restart: always
+            volumes:
+                - $PWD/../docker-compose.yml:/usr/src/docker-config/docker-compose.yaml
+                - /var/run/docker.sock:/var/run/docker.sock
+            networks:
+                - web
