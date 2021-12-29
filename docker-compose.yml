@@ -12,6 +12,7 @@ services:
       - traefik.http.routers.portfolio.tls.certresolver=lets-encrypt
       - traefik.http.routers.portfolio.rule=Host(`moussa.codes`) ||
         Host(`www.moussa.codes`)
+      - traefiker.portfolio.order=0
     networks:
       - web
       - internal
@@ -24,6 +25,7 @@ services:
         PathPrefix(`/shell`)
       - traefik.http.middlewares.shell-prefix.stripprefix.prefixes=/shell
       - traefik.http.routers.shell-api.middlewares=shell-prefix
+      - traefiker.shell-api.order=1
     networks:
       - web
       - internal
@@ -33,6 +35,7 @@ services:
       - traefik.http.routers.httpd.tls=true
       - traefik.http.routers.httpd.tls.certresolver=lets-encrypt
       - traefik.http.routers.httpd.rule=Host(`httpd.moussa.codes`)
+      - traefiker.httpd.order=2
     networks:
       - web
       - internal
