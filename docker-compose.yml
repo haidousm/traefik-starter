@@ -11,7 +11,7 @@ services:
       - traefik.http.routers.portfolio.tls=true
       - traefik.http.routers.portfolio.tls.certresolver=lets-encrypt
       - traefik.http.routers.portfolio.rule=Host(`moussa.codes`) ||
-        Host(`www.moussa.codes`) || Host(`abc.moussa.codes`)
+        Host(`www.moussa.codes`)
     networks:
       - web
       - internal
@@ -24,6 +24,15 @@ services:
         PathPrefix(`/shell`)
       - traefik.http.middlewares.shell-prefix.stripprefix.prefixes=/shell
       - traefik.http.routers.shell-api.middlewares=shell-prefix
+    networks:
+      - web
+      - internal
+  httpd:
+    image: httpd:2.4.52-alpine
+    labels:
+      - traefik.http.routers.httpd.tls=true
+      - traefik.http.routers.httpd.tls.certresolver=lets-encrypt
+      - traefik.http.routers.httpd.rule=Host(`httpd.moussa.codes`)
     networks:
       - web
       - internal
