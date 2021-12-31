@@ -29,13 +29,3 @@ services:
     networks:
       - web
       - internal
-  httpd:
-    image: httpd:2.4.52-alpine
-    labels:
-      - traefik.http.routers.httpd.tls=true
-      - traefik.http.routers.httpd.tls.certresolver=lets-encrypt
-      - traefik.http.routers.httpd.rule=Host(`httpd.moussa.codes`)
-      - traefiker.httpd.order=2
-    networks:
-      - web
-      - internal

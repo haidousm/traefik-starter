@@ -21,7 +21,7 @@ services:
             networks:
                 - web
     traefiker:
-            image: haidousm/traefiker:1.0.0
+            image: haidousm/traefiker:SNAPSHOT
             restart: always
             ports:
                 - 8080:8080
