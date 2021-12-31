@@ -21,11 +21,11 @@ services:
     labels:
       - traefik.http.routers.shell-api.tls=true
       - traefik.http.routers.shell-api.tls.certresolver=lets-encrypt
+      - traefiker.shell-api.order=1
       - traefik.http.routers.shell-api.rule=Host(`api.moussa.codes`) &&
         PathPrefix(`/shell`)
       - traefik.http.middlewares.shell-prefix.stripprefix.prefixes=/shell
       - traefik.http.routers.shell-api.middlewares=shell-prefix
-      - traefiker.shell-api.order=1
     networks:
       - web
       - internal
