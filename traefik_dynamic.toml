@@ -4,7 +4,7 @@
   ]
 
 [http.routers.api]
-  rule = "Host(`monitor.moussa.codes`)"
+  rule = "Host(`monitor.haidousm.com`)"
   entrypoints = ["websecure"]
   middlewares = ["simpleAuth"]
   service = "api@internal"

@@ -1,2 +1,1 @@
-# haidousm.com
-the server configuration of haidousm.com
+# Traefiker with Traefik starter config. files
