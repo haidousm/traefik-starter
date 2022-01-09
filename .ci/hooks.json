@@ -1,8 +1,8 @@
 [
-  {
-    "id": "deploy-traefiker",
-    "execute-command": "/home/haidousm/haidousm.com/.ci/deploy-traefiker.sh",
-    "command-working-directory": "./",
-    "response-message": "Deploying Traefiker"
-  }
+    {
+        "id": "deploy-traefiker",
+        "execute-command": "/home/haidousm/.ci/deploy-traefiker.sh",
+        "command-working-directory": "./",
+        "response-message": "Deploying Traefiker"
+    }
 ]
