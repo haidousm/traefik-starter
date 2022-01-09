@@ -1,0 +1,27 @@
+entryPoints:
+  web:
+    address: ':80'
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: ':443'
+api:
+  dashboard: true
+certificatesResolvers:
+  lets-encrypt:
+    acme:
+      email: haidous.m@gmail.com
+      storage: acme.json
+      tlsChallenge: {}
+providers:
+  docker:
+    watch: true
+    network: web
+  file:
+    filename: traefik_dynamic.toml
+log:
+  level: DEBUG
+  filePath: ~/haidousm.com/logs/traefik.log
