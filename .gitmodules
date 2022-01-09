@@ -1,6 +1,0 @@
-[submodule "portfolio"]
-	path = portfolio
-	url = https://github.com/haidousm/portfolio.git
-[submodule "unix-shell-api"]
-	path = unix-shell-api
-	url = https://github.com/haidousm/unix-shell-api.git
