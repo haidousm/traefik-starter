@@ -21,7 +21,7 @@ providers:
     watch: true
     network: web
   file:
-    filename: traefik_dynamic.toml
+    filename: traefik_dynamic.yml
 log:
   level: DEBUG
-  filePath: ~/haidousm.com/logs/traefik.log
+  filePath: /var/log/traefik/traefik.log

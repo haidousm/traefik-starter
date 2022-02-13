@@ -6,9 +6,9 @@ http:
           - 'admin:$apr1$1L1v3.Lx$mh9BpyRB6cfRjItG4lqCn0'
   routers:
     api:
-      rule: Host(`monitor.haidousm.com`)
+      rule: Host(`monitor.localhost`)
       entrypoints:
-        - websecure
+        - web
       middlewares:
         - simpleAuth
       service: api@internal
