@@ -7,12 +7,11 @@ services:
         image: traefik:v2.3
         ports:
             - 80:80
-            - 443:443
+            - 8080:8080
         restart: always
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - $PWD/traefik.yml:/traefik.yml
             - $PWD/traefik_dynamic.yml:/traefik_dynamic.yml
-            - $PWD/acme.json:/acme.json
         networks:
             - web
